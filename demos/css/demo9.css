@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+.box{
+	margin: 30px auto;
+	width: 523px;
+	height: 180px;
+	background-color: #ECF2F7;
+}
+.box .content{
+	display: flex;
+	flex-wrap: wrap;/*换行*/
+	/*水平方向*/
+	justify-content:space-between;/*两边贴紧，中间平均分布*/
+	/*垂直方向*/
+	align-content: space-between;
+	height: 180px;
+}
+.box .content li{
+	width: 130px;
+	height: 59px;
+	background-color: #FFFFFF;
+	text-align: center;/*水平方向居中*/
+}
+.box .content li img{
+	display: block;
+	margin: auto;
+}

@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.nav{
+	margin:auto;
+	width: 1000px;
+}
+.nav .nav_list{
+	/*弹性盒子的设置在父级元素*/
+	display: flex;/*设置为弹性盒子*/
+	justify-content: space-around;
+	width: 1000px;
+	height: 41px;
+	background-color: #0f5393;
+}
+.nav .nav_list li{
+	width: 90px;
+	height: 41px;
+	line-height: 41px;
+	text-align: center;
+}
+li a{
+	display: block;
+	width: 90px;
+	height: 41px;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.nav .nav_list li a:hover{
+	color:#fff678;
+	background-image: url(../img/8-1.png);
+	background-position:0 -5px;
+}
+.nav .time{
+	box-sizing: border-box;
+	padding-left: 35px;
+	height: 35px;
+	background-color: #ecf2f7;
+	font-size: 12px;
+	line-height: 35px;
+}
+

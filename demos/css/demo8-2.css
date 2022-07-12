@@ -1,0 +1,48 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.nav{
+	box-sizing: border-box;
+	margin: 50px auto;
+	padding: 0 200px;
+	width: 1376px;
+	height: 76px;
+	background-image: url(../img/8-2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.nav img{
+	float: left;/*
+	            float 属性定义元素在哪个方向浮动。
+	             以往这个属性总应用于图像，使文本围绕在图像周围，
+				 */
+	margin: 14px 10px 0 0 ;
+}
+.nav .nav_list{
+	display: flex;
+	justify-content: space-between;
+}
+.nav .nav_list li{
+	margin: 18px 0;
+	width: 102px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;/*文字居中对齐*/
+}
+.nav .nav_list li:hover{
+	background-image: url(../img/8-4.png);
+	background-size: 100% 100%;
+}
+
+.nav .nav_list li a{
+	font: 15px;
+	color: #FFFFFF;
+}

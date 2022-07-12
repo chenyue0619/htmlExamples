@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.rainbow{
+	margin: 10px auto;
+	width: 1000px;
+	height: 400px;
+	/*左上 右上 左下 右下*/
+	border-radius: 50% 50% 0 0 ;
+	/*
+		1、径向渐变从中心位置开始起作用
+		2、颜色之间一定要用逗号隔开
+		3、ellipse at设置的是渐变中心点的位置
+	*/
+	background-image: radial-gradient(ellipse at 500px 400px,transparent 10%,purple,blue,cyan,green,yellow,orange,red,transparent 70%);
+}

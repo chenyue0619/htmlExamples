@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+.box{
+	position: relative;
+	/*相对定位：相对自己本身的位置，父级元素此设置，子级元素会相对父级元素定位*/
+	margin: 0 auto;
+	width:1360px;
+	height:520px;
+	/*url地址不能带英文括号，因为不会自动转码*/
+	background-image: url(../img/10-%202.jpg);
+	background-size: 150% 100%;
+	background-position:-240px 0;
+	background-repeat: no-repeat;
+}
+.box .login_list{
+	position: absolute;
+	/*绝对定位：相对于浏览器本身定位，相对父级元素定位*/
+	top: 50%;
+	transform: translateY(-50%);/*垂直居中对齐*/
+	right: 100px;
+	width: 340px;
+	height: 430px;
+	background-color: #F5EAE9;
+}
+.box .login_list form #user,#pwd{
+	box-sizing: border-box;
+	margin: 24px 43px;
+	padding-left:52px;/*文本内容会从内边距位置开始输入*/
+	width: 254px;
+	height: 38px;
+	border: #F5EAE9;
+	background-image: url(../img/10-%204.jpg);/*url对于英文括号不会转码*/
+	background-repeat: no-repeat;
+	background-position: 0 -3px;
+	background-size: 38px auto;/*图片大小会根据其中一个像素值自动平铺*/	
+	font-size: 15px;
+}
+.box .login_list form #pwd{
+	margin-top:0;
+	margin-bottom: 29px;
+	background-image: url(../img/10-%203.jpg);
+}
+.box .login_list form label{
+	margin-left: 3px;
+	font-size: 13px;
+}
+.box .login_list form #radio{
+	margin:0 3px 0 43px;
+}
+.box .login_list form span{
+	font-size: 12px;
+	font-weight: 200;
+}
+.box .login_list form #submit{
+	/*input是行内块级元素inline-block*/
+	display: block;
+	margin:24px auto;
+	width: 255px;
+	height: 44px;
+	border: 0;
+	background-color: darkred;
+	font-size: 16px;
+	color: #FFFFFF;
+	/*letter-spacing改变字间距*/
+	letter-spacing:8px;
+}
+.box .login_list form .login_type{
+	box-sizing: border-box;
+	padding: 20px 0 0 42px;
+	width: 100%;
+	height: 55px;
+	border-top: 1px solid #DDDDDD;
+}
+.box .login_list form .login_type span{
+	font-size: 16px;
+	font-weight: 500;
+}
+
+

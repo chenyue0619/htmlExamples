@@ -1,0 +1,73 @@
+{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+html{
+	background-color: #444;
+}
+.nav{
+	box-sizing: border-box;
+	margin:10px auto;
+	padding: 0 50px;
+	width: 450px;
+	height: 50px;
+	/*
+		线性渐变：
+		1、角度, 颜色, 位置（从该元素左上角位置作为坐标原点开始）, 大小
+		2、顺时针
+		3、to top从下到上渐变
+	*/
+   /*	
+		1、每个渐变颜色设置后面都要用逗号隔开；
+		2、整个背景颜色属性以分号结尾；
+		3、但是分号前面不可以有逗号，意思就是说随后一个渐变颜色设置就不要加逗号了*/
+	background: linear-gradient(45deg,transparent 50%,#fff 50%) no-repeat 0px 0/25px 25px,
+				linear-gradient(135deg,transparent 50%,#fff 50%) no-repeat 0 25px/25px 25px,
+				linear-gradient(to right,#fff,#fff) no-repeat 25px 0/25px 50px,
+				linear-gradient(45deg,#fff 50%,#ccc 50%) no-repeat 50px 40px/10px 10px,
+				linear-gradient(315deg,#fff 50%,#ccc 50%) no-repeat 110px 40px/10px 10px,
+				linear-gradient(45deg,#fff 50%,#ccc 50%) no-repeat 120px 40px/10px 10px,
+				linear-gradient(315deg,#fff 50%,#ccc 50%) no-repeat 180px 40px/10px 10px,
+				linear-gradient(45deg,#fff 50%,#ccc 50%) no-repeat 190px 40px/10px 10px,
+				linear-gradient(315deg,#fff 50%,#ccc 50%) no-repeat 250px 40px/10px 10px,
+				linear-gradient(45deg,#fff 50%,#ccc 50%) no-repeat 260px 40px/10px 10px,
+				linear-gradient(315deg,#fff 50%,#ccc 50%) no-repeat 320px 40px/10px 10px,
+				linear-gradient(45deg,#fff 50%,#ccc 50%) no-repeat 330px 40px/10px 10px,
+				linear-gradient(315deg,#fff 50%,#ccc 50%) no-repeat 390px 40px/10px 10px,
+				linear-gradient(to right,#fff,#fff) no-repeat 400px 0/25px 50px,
+				linear-gradient(315deg,transparent 50%,#fff 50%) no-repeat 425px 0/25px 25px,
+				linear-gradient(225deg,transparent 50%,#fff 50%) no-repeat 425px 25px/25px 25px
+		;
+}
+.nav li{
+	/*float使元素脱离正常的文本流
+	 元素浮动之后，它脱离当前正常的文档流，所以无法撑开其父元素，造成父元素的高度塌陷。
+	 */
+	float: left;
+	width: 70px;
+	height: 50px;
+	/*
+		li是不会继承父级元素的背景颜色
+		所以当伪类选择器hover鼠标放在相应元素上面不起作用时，
+		是因为没有设置背景颜色，所以才不会看到li元素飘起来
+	*/
+	background-color: #FFFFFF;
+	font-size: 14px;
+	line-height: 50px;
+	text-align: center;/*水平居中*/
+	text-transform: capitalize;/*首字母大写*/
+}
+/*
+	fixed相对于浏览器定位
+	absolute相对于父级元素定位
+	relative相对于自己原本位置定位
+*/
+.nav li:hover{
+	transform: translateY(-10px);
+	/*Z-index 仅能在定位元素上奏效（例如 position:absolute;）*/
+	transition: 0.4s;
+	border: 3px 3px 0 0;
+}

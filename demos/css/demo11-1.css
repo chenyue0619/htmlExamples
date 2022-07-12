@@ -1,0 +1,16 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.chessboard{
+	margin: 20px auto;
+	width: 350px;
+	height: 350px;
+}
+.chessboard tr:nth-child(2n) td:nth-child(2n-1){
+	background-color: #000000;
+}
+.chessboard tr:nth-child(2n-1) td:nth-child(2n){
+	background-color: #000000;
+}
+

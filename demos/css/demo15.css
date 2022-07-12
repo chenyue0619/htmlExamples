@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(../img/6-%204.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.box{
+	margin: 100px auto;
+	list-style: none;
+	width: 70%;
+	height: 600px;
+	border: 1px solid #000000;
+}
+.box li{
+	float: left;
+	margin:30px 10px;
+	width: 180px;
+	height: 105px;
+	background-color: rgba(136,248,251,.5);
+}
+/*
+	1、:before与:after选择器在被选元素的内容前面/后面插入内容
+	2、伪元素before与after必须设置属性content不然不起作用
+	3、伪元素如果没有设置"content(双引号)"属性，伪元素是没有用的
+	4、before、after伪元素存在默认样式inline行内元素，所以设置宽高不起作用
+*/
+.box li:before,.box li:after{
+	display: inline-block;/*这样设置就可以对伪类元素设置宽高*/
+	content: "#";
+	width: 180px;
+	height: 105px;
+	background-color: rgba(136,248,251,.5);
+	transform-origin: 50% 50%;/*设置旋转中心点*/
+}
+.box li:before{
+	transform: rotate(60deg);
+}
+.box li:after{
+	position: relative;
+	bottom: 190px;
+	transform: rotate(120deg);
+}
+.box li:nth-child(7){
+	margin-left: 110px;
+}
+.box li:nth-child(19){
+	margin-left: 110px;
+}
+.box li:nth-child(20){
+	margin-left: 610px;
+}
+.box li:hover{
+	/*
+		rotate旋转角度
+		scale缩放程度
+		不可以设置两个transform，不然后面的会覆盖掉前面的
+	*/
+	transform: rotate(1060deg) scale(0.5);
+	transition: .8s;/*持续时间*/
+}
+.box li img{
+	position: relative;
+	left: 50%;
+	bottom: 88%;
+	transform: translateX(-50%);
+}
+

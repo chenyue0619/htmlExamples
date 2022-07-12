@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>demo10-2</title>
+		<link rel="stylesheet" type="text/css" href="css/demo10-2.css"/>
+	</head>
+	<body>
+		<!--
+			action:表单数据提交的位置,form表单只有设置action属性值才会发送数据，
+			method:数据提交的方式
+				get数据提交到地址栏URL后面，有字符数限制，不安全
+				post数据提交到后台，无字符数限制，安全
+		-->
+		<form action="" method="get">
+			<!--
+				name:只有设置name属性值的表单才可以提交数据，后期利用JQ实现
+				placeholder:为表单加上默认的值，以文字显示；value显示形式与表单类型一致
+				required:该表单为必填项
+			-->
+			
+			<span id="name">用户名</span><input type="text" name="username" id="username" placeholder="输入英文字母或数字" required="required"/>
+				<span id="explain">用户名必须为4-16位数字或者英文字母</span>
+			<span id="name">密码</span><input type="password" name="pwd" id="pwd" placeholder="输入密码" required="required"/>
+				<span id="explain">输入6位数字</span>
+			<span id="name">确认密码</span><input type="pwd" name="surepwd" id="surepwd" placeholder="确认密码" required="required"/>
+				<span id="explain">与上方密码输入一致</span>
+			<span id="name">email</span><input type="email" name="email" id="email" placeholder="1234567890@qq.com" required="required"/>
+				<span id="explain">输入邮箱地址</span>
+			<span id="name">昵称</span><input type="text" name="nickname" id="nickname" placeholder="输入英文字母或数字" required="required"/>
+				<span id="explain">输入你的昵称</span>
+			<input type="button" name="register" id="register" value="注册" />
+			<input type="button" name="login" id="login" value="我有账号,我要登录" />
+		</form>
+	</body>
+</html>

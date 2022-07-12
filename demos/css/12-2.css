@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.ba-gua{
+	margin: 30px auto;
+	width: 620px;
+	height: 620px;
+	/*
+		width的大小不包括border的大小
+		边框border的大小是另外算的
+	*/
+	border: 10px solid #000;
+	border-radius: 50%;
+	background: linear-gradient(to right,black 50%,white 50%);
+}
+.ba-gua .black,.white{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width:310px;
+	height: 310px;
+	border-radius: 50%;
+}
+.ba-gua .black,.white{
+	background: radial-gradient(white 30%,black 30%,black 50%);
+}
+.ba-gua .white{
+	background: radial-gradient(black 30%,white 30%,white 50%);
+}

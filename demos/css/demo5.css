@@ -1,0 +1,58 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+.box{
+	box-sizing: border-box;
+	margin: 20px auto;
+	padding: 3.5px 0;
+	width: 803px;
+	height: 450px;
+	background-color: lightblue;
+}
+.list{
+	display: flex;
+	justify-content: space-around;/*作用在父元素，子元素才会起作用*/
+	
+}
+li{
+	box-sizing: border-box;
+	width: 260px;
+	height: 443px;
+	padding: 10px;
+	background-color: #FFFFFF;
+}
+p{
+	height: 40px;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 40px;
+}
+.discount{
+	margin-bottom: 10px;
+	width: 60px;
+	height: 21px;
+	border: 1px solid red;
+	font-size: 14px;
+	color: red;
+	line-height: 21px;
+}
+.price #now{
+	font-size: 30px;
+	color: red;
+}
+.price #former{
+	font-size: 16px;
+	font-family: serif;
+	font-weight: 100;
+}
+.bottom{
+	margin-top: 30px;
+}
+.bottom #shipping{
+	float: right;
+}
+

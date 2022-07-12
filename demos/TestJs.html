@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<input type="button" onclick="test()" value="测试" />	-->
+		<div id="timer" style="margin-left:10px; margin-top:10px; float:right; color:red; font-size:-1;" >
+			
+			
+			
+			<a href="javaScript:test()">百度一下</a>
+			<script type="text/javascript">
+				
+				
+				
+				
+				
+				
+				
+				setInterval("timer.innerHTML=new Date().toLocaleString()",500)
+				/*setInterval:js内置函数，实现定时跳转或者定时刷新页面，
+				有两个参数：setInterval(a,b):a:应用【页面地址，输出……】；b:时间，单位毫秒*/
+			</script>
+		  </div>
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		<script type="text/javascript">	
+			
+			/*var d=new Date();
+			document.write(d);*/
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			/*function getStudentMessage()
+			{
+				var a=[];
+				for(var i=0;i<800;i++)
+				{
+					var stu=new Object();
+					stu.stuid=(i+1);
+					stu.stuname="翠花"+1;
+					stu.age=2+i;
+					stu.sex="男"+i;
+					a[i]=stu;
+				}
+				return a;
+			}*/
+			function test()
+			{
+				var stu=getStudentMessage();
+			//遍历数组
+				for(var i=0;i<stu.length;i++)
+				{
+					document.write(stu[i].stuid+":"+stu[i].stuname+":"+stu[i].age+"<br>")
+				}
+			}
+		</script>
+	</body>
+</html>

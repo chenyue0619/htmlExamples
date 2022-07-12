@@ -1,0 +1,65 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.rotate{
+	position: relative;
+	margin: 100px auto;
+	width: 300px;
+	height: 300px;
+	animation: revolve 20s linear infinite;
+	/*
+		preserve-3d：
+			1、preserve维持
+			2、表示所有子元素在3D空间中呈现
+	*/
+	transform-style: preserve-3d;
+}
+@keyframes revolve{
+	from{
+		transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	to{
+		transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+}
+/*当样式不起作用时，注意检查是不是选择器名字写错了*/
+.rotate div{
+	/*若父级元素没有设置relative，那么，absolute相对于body进行绝对定位*/
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	border: 1px solid #CCCCCC;
+	background-size: 100% 100%;
+	background-position: center;
+}
+/*
+	rotate旋转三维坐标系：
+		左右为X轴
+		上下为Y轴
+		前后为Z轴
+*/
+.rotate .front{
+	background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201612%2F07%2F20161207133014_VUuRY.thumb.700_0.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650961726&t=c4468022daaec9675ad4d0fb4bae0348);
+}
+.rotate .bottom{
+	background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190318%2F2f8fd8ce12c0480e91645896e6a05d6b.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650961495&t=cd5a8d82a51d9c1197df21b8b2242358);
+	/*rotate默认是按照中心点开始旋转的*/
+	transform:rotateX(-90deg) translateY(-150px) translateZ(-150px);
+}
+.rotate .right{
+	background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fdingyue.ws.126.net%2F1FuW7wWtl4Ya7MoSzAVZxsK2GIWJ9mbcj8gLPtvtDXGAz1545561295961.jpg&refer=http%3A%2F%2Fdingyue.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650961495&t=3a7e9f16e62aa0b7e7604f55cc077763);
+	transform: rotateY(-90deg) translateX(150px) translateZ(-150px);
+}
+.rotate .behind{
+	background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F09%2F20161009145526_SkzwT.thumb.700_0.png&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650961495&t=86c273281696692ccc940e5bd097d352);
+	transform: rotateY(180deg) translateZ(-300px);
+}
+.rotate .left{
+	background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F10167689701%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650961495&t=36b102980a366e80345d80bd614f6135);
+	transform:rotateY(90deg) translateX(-150px) translateZ(-150px);
+}
+.rotate .top{
+	background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fk-static.xsfaya.com%2Fuploads%2Fext%2Fa%2Ft011b0c89bb5ecabb42.jpg&refer=http%3A%2F%2Fk-static.xsfaya.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650961495&t=3240b2ae6c57a67e5f04c4af35f4f5fe);
+	transform:rotateX(90deg) translateY(150px) translateZ(-150px);
+}

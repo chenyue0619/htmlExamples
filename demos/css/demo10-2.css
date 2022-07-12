@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+form{
+	box-sizing: border-box;
+	margin: 50px auto;
+	padding: 44px 0;
+	width: 427px;
+	height: 417px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 300;
+}
+form #name{
+	/*此操作可以是input元素前面的文字右对齐，不然默认左对齐的*/
+	display: inline-block;
+	width: 60px;/*设置盒子宽度确保可以装下最长的文字，以便实现对齐*/
+	text-align: right;/*文本右对齐*/
+	font-weight: 400;
+} 
+form input{
+	position: relative;
+	bottom: 33px;
+	/*input是行内块级元素inline-block*/
+	display: block;
+	box-sizing: border-box;
+	margin:auto;
+	padding-left: 10px;
+	width: 296px;
+	height: 44px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+}
+/*
+	伪类选择器：
+	1、focus元素获得焦点，点击元素之后的状态显示
+	2、active为活动的链接选择样式（焦点连接）。
+		先后顺序：link/visited/hover/active
+*/
+form #explain{
+	display: none;/*没有任何样式，意味着不显示*/
+}
+/*focus焦点在谁身上就将该选择器写在相应元素后面*/
+
+/*+选择器指的是相邻元素，而不是子级元素*/
+form input:focus+#explain{
+	/*相对定位，相对自己原本的位置定位*/
+	position: relative;
+	left: 370px;
+	bottom: 70px;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 20px;
+	height: 30px;
+	border-radius: 5px;
+	background-color:#56a9d3;
+	font-size: 16px;
+	color: #FFFFFF;
+	line-height: 30px;
+}
+form #register,#login{
+	display: inline-block;
+	/*float设置之后内外边距生效*/
+	position: relative;
+	top: -20px;
+	left: 120px;
+	width: 80px;
+	height: 30px;
+	background-color: #3c6cb1;
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height:30px;/*垂直方向居中*/
+	text-align: center;/*水平方向居中*/
+}
+form #login{
+	margin-left: 10px;
+	width: 140px;
+}

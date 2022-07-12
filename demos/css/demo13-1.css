@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.line{
+	margin: 400px auto;
+	width: 800px;
+	height: 0;
+	border: 1px solid red;
+}
+.box{
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000000;
+	/*
+		1、animation：动画名字 动画时长
+		2、infinite无穷尽的动
+		3、一定要有 animation-duration 属性，否则时长为 0，就不会播放动画了。
+		4、语法：animation: 
+			name：名字
+			duration：完成动画所需要的时间 
+			timing-function：规定动画的速度曲线（linear匀速，默认是慢到快到慢） 
+			delay：动画开始之前的延迟 
+			iteration-count：动画播放次数 
+			direction：规定是否应该轮流反向播放动画（alternate一直往返播放）。
+		5、steps：每一帧分几步完成，两个参数
+				steps(1,end)：两步完成，每次结束后是从end还是start开始，默认是end
+	*/
+	animation: move 10s steps(1) infinite,
+				roll 2s linear infinite;
+	/*每次动作的起始位置*/
+	transform-origin: right bottom;
+}
+/*
+	keyframes关键帧：定义动画，后面跟动画的名字
+*/
+@keyframes move{
+	0%{
+		left: 0;
+	}
+	20%{
+		left: 100px;
+	}
+	40%{
+		left: 200px;
+	}
+	60%{
+		left: 300px;
+	}
+	80%{
+		left: 400px;
+	}
+	100%{
+		left: 500px;
+	}
+}
+@keyframes roll{
+	to{
+		transform: rotate(90deg);
+	}
+}

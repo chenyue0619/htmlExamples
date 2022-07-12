@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #fcc6c6;
+}
+.box{
+	margin: 30px auto;
+	width: 476px;
+	height: 530px;
+}
+.box .girl{
+	margin: auto;
+	width: 180px;
+	height: 300px;
+	/*url没办法转码英文括号*/
+	background-image: url(../img/14-%202.png);
+	animation: girl 1s steps(7) infinite;
+}
+@keyframes girl{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: -1260px 0;
+	}
+}
+.box .loading1{
+	width: 476px;
+	height: 178px;
+	background-image:url(../img/14-%203.png);
+	/*steps一定要跟图片帧数相同，不然就会出现一直上下滑动的效果*/
+	animation: loading1 2.5s steps(136) infinite;
+}
+@keyframes loading1{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 0 24208px;
+	}
+}
+.box .loading2{
+	margin: auto;
+	width: 265px;
+	height: 52px;
+	line-height:52px;
+	background-image: url(../img/14-%201.png);
+	/*若不设置重复，那么就会出现多余的黑点点·11*/
+	background-repeat: repeat-y;
+	/*steps()一定要跟背景图片的帧数相同，动画会一直处于跳跃的状态*/
+	animation: loading2 2s steps(13) infinite;
+}
+@keyframes loading2{
+	from{
+		background-position: 80px 675px;
+	}
+	to{
+		background-position: 80px 0px;
+	}
+}

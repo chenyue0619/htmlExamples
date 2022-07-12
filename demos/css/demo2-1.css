@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: lightgray;
+}
+ul li{
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+	list-style: none;
+	margin-right: 5px;
+	padding-left: 20px;
+	width: 236px;
+	height: 221px;
+	background-color: white;
+	font-size: 18px;
+}
+img{
+	position: absolute;
+	/*relative(相对)本身以及absolute(绝对)父级。
+	 用absolute定位时,要把其上一级的元素样式属性position设置为relative。
+	  也就是说,position的属性值的效果,直接受其容器样式中position属性值影响。*/
+	right: 0;
+	bottom: 0;
+	width:170px;
+	height: 170px;
+	
+}
+/*p:nth-child(2)同一个盒子下面相同标签不同排序*/
+li p:nth-child(2){
+	font-size: 15px;
+	color: #7DC333;
+}
